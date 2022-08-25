@@ -1,0 +1,17 @@
+
+
+
+ $("#p1GivenName").text(data.liveStreamTables[0].results[6].p1GivenName + ' ' + data.liveStreamTables[0].results[6].p1Surname)
+        $("#p1Division").text(data.liveStreamTables[0].results[6].p1Division)
+        $("#p1TotalRawPoints").text(data.liveStreamTables[0].results[6].p1TotalRawPoints)
+        $("#p1TotalRawRacks").text(data.liveStreamTables[0].results[6].p1TotalRawRacks)
+        $("#p1TotalRawBallsPotted").text(data.liveStreamTables[0].results[6].p1TotalBallsPotted)
+        $("#p2GivenName").text(data.liveStreamTables[0].results[6].p2GivenName + ' ' + data.liveStreamTables[0].results[6].p2Surname)
+        $("#p2Division").text(data.liveStreamTables[0].results[6].p2Division)
+        $("#p2TotalRawPoints").text(data.liveStreamTables[0].results[6].p2TotalRawPoints)
+        $("#p2TotalRawRacks").text(data.liveStreamTables[0].results[6].p2TotalRawRacks)
+        $("#p2TotalBallsPotted").text(data.liveStreamTables[0].results[6].p2TotalBallsPotted)
+        $("#t140EventCurrentRoundNo").text(data.t140EventCurrentRoundNo)
+        $("#cueSportCode").text(data.cueSportCode)
+        $("#t140EventName").text(data.t140EventName)
+        $("#tableId").text(data.liveStreamTables[0].tableId)

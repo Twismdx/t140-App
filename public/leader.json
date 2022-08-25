@@ -1,0 +1,62 @@
+[
+    {
+        "position": "1",
+        "rankedPlayer": true,
+        "eventsCompleted": "18",
+        "givenName": "Arthur",
+        "surname": "Karanis",
+        "playerUniqueId": "A.Karanis**(AUS)84GHW",
+        "division": "D6",
+        "targetAvg": 78.26458671916131,
+        "rawScoreAvg": 104.14285714285714,
+        "eventPoints": 1581.1478929658708,
+        "wrp": 0.0,
+        "score": 1581.1478929658708,
+        "rawScore": 729.0
+    },
+    {
+        "position": "2",
+        "rankedPlayer": false,
+        "eventsCompleted": "1",
+        "givenName": "Nes",
+        "surname": "Fernandez",
+        "playerUniqueId": "N.Fernandez(AUS)38GEY",
+        "division": "D8",
+        "targetAvg": 37.69862888273399,
+        "rawScoreAvg": 47.57142857142857,
+        "eventPoints": 1469.109597820862,
+        "wrp": 0.0,
+        "score": 1469.109597820862,
+        "rawScore": 333.0
+    },
+    {
+        "position": "3",
+        "rankedPlayer": true,
+        "eventsCompleted": "21",
+        "givenName": "Peter",
+        "surname": "Udycz",
+        "playerUniqueId": "P.Udycz****(AUS)67HJI",
+        "division": "D6",
+        "targetAvg": 98.39586146908685,
+        "rawScoreAvg": 96.28571428571429,
+        "eventPoints": 1385.228969716392,
+        "wrp": 0.0,
+        "score": 1385.228969716392,
+        "rawScore": 674.0
+    },
+    {
+        "position": "4",
+        "rankedPlayer": false,
+        "eventsCompleted": "11",
+        "givenName": "Mark",
+        "surname": "Potter",
+        "playerUniqueId": "M.Potter***(AUD)85DVE",
+        "division": "D8",
+        "targetAvg": 34.78902190583013,
+        "rawScoreAvg": 30.857142857142858,
+        "eventPoints": 1372.476846659189,
+        "wrp": 0.0,
+        "score": 1372.476846659189,
+        "rawScore": 216.0
+    }
+]
