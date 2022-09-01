@@ -11,10 +11,9 @@ function App() {
 
 
   const getScores = async () => {
-    const response = await fetch (`${API_SCORES}`,{
-      method: 'GET',
+    const response = await fetch (API_SCORES, {
       headers: { 
-        'Ocp-Apim-Subscription-Key': a5a933d50f7b40928d1e0c0612903033,
+        "Ocp-Apim-Subscription-Key": a5a933d50f7b40928d1e0c0612903033,
 
       }});	
     const data = await response.json();
