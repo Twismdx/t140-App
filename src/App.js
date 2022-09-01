@@ -3,21 +3,25 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import PlayerIcon from './PlayerIcon';
 
-const API_SCORES = 'https://t140apim.azure-api.net/demoT140LivestreamApi/GetScores?T140EventId=499cd369-8583-4fad-92dc-14b5d48ab445'
 
 function App() {
   const [ scores, setScores ] = useState([]);
   const [ title, settitles ] = useState([]);
 
 
-  const getScores = async () => {
-    const response = await fetch (API_SCORES, {
-      headers: { 
-        "Ocp-Apim-Subscription-Key": "npma5a933d50f7b40928d1e0c0612903033",
-        '
+  var myHeaders = new Headers();
+myHeaders.append("Ocp-Apim-Subscription-Key", "a5a933d50f7b40928d1e0c0612903033");
 
-      }});	
-    const data = await response.json();
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+const getScores = async () => {
+const response = await fetch("https://t140apim.azure-api.net/demoT140LivestreamApi/GetScores?T140EventId=499cd369-8583-4fad-92dc-14b5d48ab445", requestOptions)
+const data = await response.json();
+  
     
         if 
             (data.t140EventCurrentRound === 1) {							
