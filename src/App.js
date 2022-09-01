@@ -14,7 +14,7 @@ function App() {
     const response = await fetch (`${API_SCORES}`,{
       method: 'GET',
       headers: { 
-        'Ocp-Apim-Subscription-Key':'a5a933d50f7b40928d1e0c0612903033'
+        'Ocp-Apim-Subscription-Key': a5a933d50f7b40928d1e0c0612903033,
 
       }});	
     const data = await response.json();
