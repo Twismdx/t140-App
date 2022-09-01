@@ -1,24 +1,17 @@
 import Overlay from './Overlay';
 import { useState, useEffect } from 'react';
-import './App.css';
-import PlayerIcon from './PlayerIcon';
+import '../App.css';
+import PlayerIcon from '../JSX Components/PlayerIcon';
 
 const API_SCORES = './data.json'
 
-function App() {
+function Scoreboard() {
   const [ scores, setScores ] = useState([]);
   const [ title, settitles ] = useState([]);
 
 
   const getScores = async () => {
-    const response = await fetch (`${API_SCORES,
-    {
-      method: 'GET',
-      headers: { 
-        'Ocp-Apim-Subscription-Key': '499cd369-8583-4fad-92dc-14b5d48ab445'
-
-      }
-    }}`);	
+    const response = await fetch (`${API_SCORES}`);	
     const data = await response.json();
     
         if 
@@ -57,7 +50,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="Scoreboard">
       <div className="container">
         <Overlay
           scores={scores} 
@@ -82,4 +75,4 @@ function App() {
   )
 }
 
-export default App;
+export default Scoreboard;

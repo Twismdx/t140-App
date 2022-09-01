@@ -1,0 +1,132 @@
+@font-face {
+  font-family: semiBold;
+  src: url(./fonts/open-sans.semibold.ttf);
+}
+@font-face {
+  font-family: extraBold;
+  src: url(./fonts/open-sans.bold.ttf);
+}
+
+  .st0{fill:#CE0E2D;}
+	.st1{fill:#101820;}
+	.st2{fill:#17FF7A;}
+	.st3{fill:#3C3841;}
+	.st4{fill:#0D0704;}
+	.st5{fill:#6D6E71;}
+	.st6{fill:#007078;}
+	.st7{fill:#005866;}
+	.st8{fill:#AD0E2D;}
+	.st9{fill:#CBCBCB;stroke:#FFFFFF;stroke-width:2.2496;stroke-miterlimit:10;}
+	.st10{font-family:'extraBold';}
+	.st11{font-size:21.1835px;}
+	.st12{fill:#FFFFFF;}
+	.st13{font-size:13.5924px;}
+	.st14{fill:#CBCBCB;}
+	.st15{font-size:14.2757px;}
+	.st16{fill:#FFDD00;}
+	.st17{fill:#FF1111;}
+	.st18{font-family:'semiBold';}
+	.st19{font-size:28.5514px;}
+	.st20{font-size:20.3987px;}
+	.st21{font-size:15.2973px;}
+
+.svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.f {
+  direction: rtl;
+}
+
+
+html head body {
+	background: #fafafa00;
+}
+.getLeaderboard {
+	width: 800px;
+	margin: 60px auto;
+	font-family: sans-serif;
+	color: #213b4c;
+}
+.getLeaderboard h1 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.getLeaderboard table {
+	width: 100%;
+	border-spacing: 0 0;
+	background: #213b4c;
+	color: white;
+	box-shadow: 0 0 20px #1e3344;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.getLeaderboard table th {
+	background: #0c1e28;
+	border: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	padding: 20px 0px 20px 0px;
+}
+.getLeaderboard table th:first-of-type {
+	padding: 0 30px 0 30px;
+	text-align: center;
+}
+.getLeaderboard table th:last-of-type {
+	padding: 0 30px 0 30px;
+	text-align: center;
+}
+.getLeaderboard table th:nth-child(3) {
+	text-align: center;
+}
+.getLeaderboard table th:nth-child(4) {
+	text-align: right;
+	padding-right: 30px
+}
+.getLeaderboard table th:nth-child(2) {
+	text-align: center;
+}
+.getLeaderboard table th:nth-child(1) {
+	text-align: center;
+	padding-right: 30px
+}
+.getLeaderboard table tr:nth-child(2n+1) {
+	background: #1e3344;
+}
+.getLeaderboard table tr td {
+	padding: 10px;
+}
+.getLeaderboard table tr td:nth-child(1) {
+	padding: 10px 30px 20px 30px;
+	text-align: center;
+}
+.getLeaderboard table tr td:nth-child(3) {
+	text-align: center;
+}
+.getLeaderboard table tr td:nth-child(4) {
+	text-align: center;
+}
+.getLeaderboard table tr td:nth-child(2) {
+	text-align: center;
+}
+.getLeaderboard table tr td {
+	text-align: center;
+}
+.getLeaderboard table tr:hover {
+	background: #18a5fe;
+}
+.getLeaderboard a {
+	color: white;
+	text-decoration: none;
+}
+.getLeaderboard a:hover {
+	color: white;
+}
+.none {
+	visible: hidden;
+	opacity: 0;
+}
+
