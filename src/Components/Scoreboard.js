@@ -1,19 +1,27 @@
 import Overlay from './Overlay';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
-import PlayerIcon from '../JSX Components/PlayerIcon';
+import PlayerIcon from '../JSXComponents/PlayerIcon';
 
-const API_SCORES = './data.json'
+function Scoreboard({ eventId }) {
 
-function Scoreboard() {
   const [ scores, setScores ] = useState([]);
+
   const [ title, settitles ] = useState([]);
 
+  var myHeaders = new Headers();
+    myHeaders.append("Ocp-Apim-Subscription-Key", "a5a933d50f7b40928d1e0c0612903033");
 
-  const getScores = async () => {
-    const response = await fetch (`${API_SCORES}`);	
-    const data = await response.json();
-    
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,   
+    redirect: 'follow'
+  };
+
+  const GetScores = async () => {
+  const response =  fetch(`https://t140apim.azure-api.net/demoT140LivestreamApi/GetScores?T140EventId=`+eventId, requestOptions)
+  const data = response.json();
+  
         if 
             (data.t140EventCurrentRound === 1) {							
                 setScores(data.liveStreamTables[0].results[0]);
@@ -46,11 +54,12 @@ function Scoreboard() {
   }  
   
   useEffect(() => {
-    getScores();
+    GetScores();
   }, []);
 
   return (
-    <div className="Scoreboard">
+    
+    <div className="App">
       <div className="container">
         <Overlay
           scores={scores} 
