@@ -18,9 +18,9 @@ function Scoreboard({ eventId }) {
     headers: myHeaders,   
     redirect: 'follow'
   };
-  var ID = `${eventId}`;
+ 
   const GetScores = async () => {
-  const response =  await axios.get(`https://t140apim.azure-api.net/demoT140LivestreamApi/GetScores?T140EventId=`, ID, requestOptions)
+  const response =  await axios.get(`https://t140apim.azure-api.net/demoT140LivestreamApi/GetScores?T140EventId=`+eventId, requestOptions)
   const data = response.data
   
         if 
