@@ -2,6 +2,7 @@ import Overlay from './Overlay';
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import PlayerIcon from '../JSXComponents/PlayerIcon';
+import axios from 'axios';
 
 function Scoreboard({ eventId }) {
 
@@ -17,10 +18,10 @@ function Scoreboard({ eventId }) {
     headers: myHeaders,   
     redirect: 'follow'
   };
-
+  var ID = `${eventId}`;
   const GetScores = async () => {
-  const response =  fetch(`https://t140apim.azure-api.net/demoT140LivestreamApi/GetScores?T140EventId=`+eventId, requestOptions)
-  const data = response.json();
+  const response =  await axios.get(`https://t140apim.azure-api.net/demoT140LivestreamApi/GetScores?T140EventId=`, ID, requestOptions)
+  const data = response.data
   
         if 
             (data.t140EventCurrentRound === 1) {							
