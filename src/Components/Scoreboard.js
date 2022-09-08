@@ -21,7 +21,7 @@ function Scoreboard({ eventId }) {
  
   const GetScores = async () => {
   const response =  await axios.get(`https://t140apim.azure-api.net/demoT140LivestreamApi/GetScores?T140EventId=`+eventId, requestOptions)
-  const data = response.data
+  const data = await response.data
   
         if 
             (data.t140EventCurrentRound === 1) {							
