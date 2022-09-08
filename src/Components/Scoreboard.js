@@ -2,7 +2,7 @@ import Overlay from './Overlay';
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import PlayerIcon from '../JSXComponents/PlayerIcon';
-import axios from 'axios';
+import $ from 'jquery';
 
 function Scoreboard({ eventId }) {
 
@@ -10,18 +10,23 @@ function Scoreboard({ eventId }) {
 
   const [ title, settitles ] = useState([]);
 
-  var myHeaders = new Headers();
-    myHeaders.append("Ocp-Apim-Subscription-Key", "a5a933d50f7b40928d1e0c0612903033");
+  useEffect(() => { 
 
-  var requestOptions = {
-    method: 'GET',
-    headers: myHeaders,   
-    redirect: 'follow'
-  };
- 
-  const GetScores = async () => {
-  const response =  await axios.get(`https://t140apim.azure-api.net/demoT140LivestreamApi/GetScores?T140EventId=`+eventId, requestOptions)
-  const data = await response.data
+  var params = (eventId);
+  var urlPrefix = "https://t140apim.azure-api.net/demoT140LivestreamApi/GetScores?T140EventId=";
+  var url = urlPrefix + encodeURIComponent(params)
+
+  $.ajax({
+    url: url,
+    data: {
+      "Ocp-Apim-Subscription-Key": "a5a933d50f7b40928d1e0c0612903033"
+    },
+    type: "GET",
+    dataType: "json",
+  })
+  .then(response => response.json())
+  .then(
+    (data) => {   
   
         if 
             (data.t140EventCurrentRound === 1) {							
@@ -52,11 +57,9 @@ function Scoreboard({ eventId }) {
                 setScores(data.liveStreamTables[0].results[6])
                 settitles(data);
         }
-  }  
+      })
   
-  useEffect(() => {
-    GetScores();
-  }, []);
+  }, [])
 
   return (
     
