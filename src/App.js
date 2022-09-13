@@ -3,7 +3,9 @@ import axios from 'axios';
 
 function App() {
 	const [eventId, setEventId] = useState([]);
-
+	const [scores, setScores] = usestate([]);
+	const [title, settitles] = usestate([]);
+	
 	useEffect(() => {
 		var urlPrefix =
 			'https://nwkbqoiyrkiyklonvezv.supabase.co/rest/v1/livestream';
@@ -20,7 +22,11 @@ function App() {
 		}).then((response) => {
 			setEventId(response.data[0].t140EventId);
 		});
-
+		
+		}, [eventId]);
+	
+	useEffect(() => {
+		
 		var params = eventId;
 		var urlPrefix2 =
 			'https://t140apim.azure-api.net/demoT140LivestreamApi/GetScores?T140EventId=';
@@ -57,7 +63,7 @@ function App() {
 				settitles(data);
 			}
 		});
-	}, []);
+	}, [scores, title]);
 
 	return (
 		<div className='App'>
