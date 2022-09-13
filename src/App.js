@@ -6,10 +6,11 @@ function App() {
 	const [scores, setScores] = usestate([]);
 	const [title, settitles] = usestate([]);
 	
+	var urlPrefix =
+		'https://nwkbqoiyrkiyklonvezv.supabase.co/rest/v1/livestream';
+	var url = urlPrefix;
+	
 	useEffect(() => {
-		var urlPrefix =
-			'https://nwkbqoiyrkiyklonvezv.supabase.co/rest/v1/livestream';
-		var url = urlPrefix;
 
 		axios({
 			url: url,
@@ -25,13 +26,13 @@ function App() {
 		
 		}, [eventId]);
 	
+	var params = eventId;
+	var urlPrefix2 =
+		'https://t140apim.azure-api.net/demoT140LivestreamApi/GetScores?T140EventId=';
+	var url2 = urlPrefix2 + encodeURIComponent(params);
+	
 	useEffect(() => {
 		
-		var params = eventId;
-		var urlPrefix2 =
-			'https://t140apim.azure-api.net/demoT140LivestreamApi/GetScores?T140EventId=';
-		var url2 = urlPrefix2 + encodeURIComponent(params);
-
 		axios({
 			url: url2,
 			headers: {
